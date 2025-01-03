@@ -1,0 +1,14 @@
+repos:
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v5.0.0
+    hooks:
+      - id: check-yaml
+      - id: trailing-whitespace
+        args: [ --markdown-linebreak-ext=md ]
+
+  - repo: https://github.com/Bahjat/pre-commit-golang
+    rev: v1.0.3
+    hooks:
+      - id: gofumpt       # see https://github.com/mvdan/gofumpt
+      - id: go-fmt-import # see https://pkg.go.dev/golang.org/x/tools/cmd/goimports
+      - id: golangci-lint # see https://github.com/golangci/golangci-lint

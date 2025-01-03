@@ -1,0 +1,33 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [ "main" ]
+    paths: [ "**/*.go" ]
+  pull_request:
+
+env:
+  REPORT_NAME: "coverage.out"
+
+jobs:
+  run_test_and_upload_codecov:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Go
+        uses: actions/setup-go@v5
+        with:
+          go-version: stable
+      - name: Install Dependencies
+        run: go mod download
+      - name: Generate Coverage
+        run: |
+          go test -coverprofile="${{ env.REPORT_NAME }}" -covermode=atomic -coverpkg=./src/... ./tests/...
+      - name: Upload Codecov
+        uses: codecov/codecov-action@v5
+        with:
+          files: "${{ env.REPORT_NAME }}"
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: shilin83/leetcode-go
+          fail_ci_if_error: true
+          verbose: true
