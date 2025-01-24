@@ -1,0 +1,7 @@
+services:
+  leetcode-go:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: leetcode-go
+    container_name: leetcode-go
