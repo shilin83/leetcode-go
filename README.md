@@ -9,6 +9,7 @@
 
 | 序号                                                                              | 题目                                                                                          | 难度 |  标签  |
 |:--------------------------------------------------------------------------------|:--------------------------------------------------------------------------------------------|:--:|:----:|
+| [0005](src/solutions/problem0005/longestPalindromicSubstring.go)                | [✅ 最长回文子串](https://leetcode.cn/problems/longest-palindromic-substring)                      | 中等 | 双指针  |
 | [0004](src/solutions/problem0004/medianOfTwoSortedArrays.go)                    | [✅ 寻找两个正序数组的中位数](https://leetcode.cn/problems/median-of-two-sorted-arrays)                  | 困难 | 二分查找 |
 | [0003](src/solutions/problem0003/longestSubstringWithoutRepeatingCharacters.go) | [✅ 无重复字符的最长子串](https://leetcode.cn/problems/longest-substring-without-repeating-characters) | 中等 | 滑动窗口 |
 | [0002](src/solutions/problem0002/addTwoNumbers.go)                              | [✅ 两数相加](https://leetcode.cn/problems/add-two-numbers)                                      | 中等 |  链表  |
