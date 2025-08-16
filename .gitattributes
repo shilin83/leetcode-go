@@ -1,0 +1,6 @@
+* text=auto eol=lf
+
+*.go linguist-language=Go
+
+*.md linguist-detectable=false
+*.sh linguist-detectable=false
