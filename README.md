@@ -27,3 +27,4 @@
 | [0001](src/solutions/problem0001) | [✅ 两数之和](https://leetcode-cn.com/problems/two-sum/)                                              | 哈希表  | 简单 |
 | [0002](src/solutions/problem0002) | [✅ 两数相加](https://leetcode-cn.com/problems/add-two-numbers/)                                      |  链表  | 中等 |
 | [0003](src/solutions/problem0003) | [✅ 无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/) | 滑动窗口 | 中等 |
+| [0004](src/solutions/problem0004) | [✅ 寻找两个正序数组的中位数](https://leetcode-cn.com/problems/median-of-two-sorted-arrays/)                  | 二分查找 | 困难 |
