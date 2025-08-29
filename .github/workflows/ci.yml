@@ -1,0 +1,27 @@
+name: Continuous Integration
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "**/*_test.go"
+  pull_request:
+env:
+  FILE_NAME: coverage.out
+jobs:
+  run_tests_and_upload_coverage:
+    runs-on: macos-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-go@v5
+        with:
+          go-version-file: go.mod
+      - run: |
+          go mod download
+          go test -coverprofile=${{ env.FILE_NAME }} -coverpkg=./src/... ./...
+      - uses: codecov/codecov-action@v5
+        with:
+          files: ${{ env.FILE_NAME }}
+          token: ${{ secrets.CODECOV_TOKEN }}
+          fail_ci_if_error: true
+          verbose: true

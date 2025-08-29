@@ -1,0 +1,23 @@
+version: "2"
+run:
+  timeout: 5m
+  relative-path-mode: gomod
+formatters:
+  enable:
+    - gofumpt
+    - goimports
+    - golines
+  settings:
+    gofumpt:
+      module-path: github.com/shilin83/leetcode-go
+      extra-rules: true
+    goimports:
+      local-prefixes:
+        - github.com/shilin83/leetcode-go
+    golines:
+      max-len: 100
+linters:
+  settings:
+    staticcheck:
+      checks:
+        - "-ST1017"

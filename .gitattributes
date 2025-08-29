@@ -1,0 +1,4 @@
+* text=auto eol=lf
+
+*.md linguist-detectable=false
+*.sh linguist-detectable=false
